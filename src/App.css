@@ -1,38 +1,136 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Manrope:wght@400;600&display=swap");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px #d0b3ff;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.app {
+  width: min(90vw, 600px);
+  margin: 4rem auto;
+  padding: 2.5rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
+  animation: cardFadeIn 1.2s ease-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
   color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+html {
+  background: radial-gradient(circle at top left, #d6b3ff, #a87ce0, #7d57c1);
+  background-size: 300% 300%;
+  background-position: 0% 50%;
+  animation: gradientFlow 30s ease-in-out infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
+  z-index: -1;
+  filter: url(#goo);
+}
+
+.blob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #d9afff, #ab7cff);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: moveBlobs 20s infinite ease-in-out alternate;
+}
+
+.blob1 {
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.blob2 {
+  top: 50%;
+  left: 70%;
+  animation-delay: 5s;
+}
+
+.blob3 {
+  top: 70%;
+  left: 30%;
+  animation-delay: 10s;
+}
+
+@keyframes moveBlobs {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, -100px) scale(1.3);
+  }
+  100% {
+    transform: translate(-20px, 50px) scale(0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 1.5rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .blob {
+    width: 200px;
+    height: 200px;
   }
 }

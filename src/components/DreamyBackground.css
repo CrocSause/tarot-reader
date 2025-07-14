@@ -1,0 +1,38 @@
+/* Full-screen background */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/starry-background.png");
+  background-size: contain;
+  background-position: center;
+  z-index: -1;
+}
+
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/stars.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: twinkle 3s infinite alternate;
+  opacity: 0.1;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
