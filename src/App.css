@@ -2,22 +2,27 @@
 
 html,
 body {
+  margin: 0;
+  padding: 0;
   height: 100%;
   width: 100%;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
-h1 {
+p {
   font-family: "Cinzel Decorative", cursive;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ffffff;
-  text-shadow: 0 0 10px #d0b3ff;
+  color: #484bd6;
+  text-shadow: 10px 10px 20px #5b1765;
 }
 
-p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.meaning {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 2.5rem;
+  color: #484bd6;
+  text-shadow: 10px 10px 20px #5b1765;
 }
 
 .app {

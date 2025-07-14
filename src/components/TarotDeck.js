@@ -28,7 +28,7 @@ export default function TarotDeck() {
             <div className="meaning">
               <h2>{drawnCard.name}</h2>
               <p>{drawnCard.meaning}</p>
-              <button onClick={() => setDrawnCard(null)}>Draw Another</button>
+              <button className="draw-again-button" onClick={() => setDrawnCard(null)}>Draw Another</button>
             </div>
           )}
         </div>
