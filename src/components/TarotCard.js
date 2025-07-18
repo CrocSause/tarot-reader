@@ -9,7 +9,7 @@ export default function TarotCard({ card, flipped }) {
           <img src={card.image} alt={card.name} />
         </div>
         <div className="tarot-back">
-          <img src="/cards/back.png" alt="Card Back" />
+          <img src="/card-back.png" alt="Card Back" />
         </div>
       </div>
     </div>
