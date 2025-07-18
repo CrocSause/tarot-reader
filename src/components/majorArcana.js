@@ -6,7 +6,7 @@ const majorArcana = [
   },
   {
     name: "The Magician",
-    image: "/cards/the-magician.png",
+    image: "/the-magician.png",
     meaning: "Resourcefulness, power, skill, manifestation",
   },
   {
@@ -78,7 +78,7 @@ const majorArcana = [
   },
   {
     name: "The Devil",
-    image: "/cards/the-magician.png",
+    image: "/the-devil.png",
     meaning: "Shadow self, attachment, addiction, restriction, sexuality",
   },
   {
@@ -88,7 +88,7 @@ const majorArcana = [
   },
   {
     name: "Star",
-    image: "/cards/the-magician.png",
+    image: "/the-star.png",
     meaning: "Hope, faith, purpose, renewal, spirituality",
   },
   {
